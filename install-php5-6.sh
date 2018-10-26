@@ -15,6 +15,15 @@ sudo apt install mysql-server
 # Install PHPMyAdmin
 sudo apt-get install phpmyadmin
 
+gedit /etc/apache2/apache2.conf
+Add the following to the bottom of the file:
+Include /etc/phpmyadmin/apache.conf
+
+service apache2 restart
+
+
+
+
 
 # Set group to www-data
 sudo chgrp www-data /var/www/html
