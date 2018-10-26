@@ -9,6 +9,9 @@ sudo apt-get install php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml
 
 sudo php -v
 
+# Install Mysql Server
+sudo apt install mysql-server
+
 # Install PHPMyAdmin
 sudo apt-get install phpmyadmin
 
