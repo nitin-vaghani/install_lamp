@@ -41,7 +41,7 @@ sudo apt-get install php5-mcrypt
 
 Activate Mcrypt
 # Enable extension
-sudo php5enmod mcrypt
+sudo phpenmod mcrypt
 
 # Restart Apache
 sudo service apache2 reload
