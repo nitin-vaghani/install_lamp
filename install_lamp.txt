@@ -1,5 +1,7 @@
 # Install Tasksel
 sudo apt-get -y install tasksel
+#Update
+sudo apt-get update
 # Install LAMP
 sudo tasksel install lamp-server
 # Install PHPMyAdmin
