@@ -76,4 +76,4 @@ sudo a2dissite 000-default.conf
 # Enable laravel.conf
 sudo a2ensite laravel.conf
 # Reload Apache
-sudo service apache reload
+sudo service apache2 reload
