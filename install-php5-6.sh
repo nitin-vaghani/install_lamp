@@ -1,12 +1,14 @@
-Use the following set of commands to enable PPA for PHP 5.6 in your Ubuntu system and install PHP 5.6.
+#Use the following set of commands to enable PPA for PHP 5.6 in your Ubuntu system and install PHP 5.6.
 
 sudo apt-get install python-software-properties
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install -y php5.6
 
-sudo apt-get install php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-intl php5.6-gd
+#install most required packages for php
+sudo apt-get install php5.6-mbstring php5.6-mcrypt php5.6-mysql php5.6-xml php5.6-intl php5.6-gd php5.6-curl php5.6-zip
 
+#check php version
 sudo php -v
 
 # Install Mysql Server
@@ -15,14 +17,14 @@ sudo apt install mysql-server
 # Install PHPMyAdmin
 sudo apt-get install phpmyadmin
 
+#Open apache2.conf file and include phpmyadmin
 gedit /etc/apache2/apache2.conf
-Add the following to the bottom of the file:
+
+#Add the following to the bottom of the file:
 Include /etc/phpmyadmin/apache.conf
 
+#restart apache server
 service apache2 restart
-
-
-
 
 
 # Set group to www-data
