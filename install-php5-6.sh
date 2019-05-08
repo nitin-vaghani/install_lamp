@@ -36,65 +36,67 @@ sudo chmod 775 /var/www/html
 # Set GID to www-data for all sub-folders
 sudo chmod g+s /var/www/html
 
-# Add your username to www-data group
+# Add your username to www-data group 
+#HELP for get username > write whoami in terminal OR echo $USER
 sudo usermod -a -G www-data username
 
 # Finally change ownership to username
 sudo chown username /var/www/html
 
-# Your account shouldn't have any more permission issues
-
-Install Curl
-sudo apt-get install php5-curl
-
-Install Mycrypt
-sudo apt-get install php5-mcrypt
-
-Activate Mcrypt
-# Enable extension
-sudo phpenmod mcrypt
-
 # Restart Apache
 sudo service apache2 reload
 
 
-Enable Mod-Rewrite
 # enable rewrite
 sudo a2enmod rewrite
 
 # restart apache
 sudo service apache2 restart
 
-Install Composer First
+#Install Composer First
 cd ~
 curl -sS https://getcomposer.org/installer | sudo php
 
 sudo mv composer.phar /usr/local/bin/composer
 
-Install Laravel
-# your-project is your destination folder
-cd /var/www/
-composer create-project laravel/laravel your-project --prefer-dist
+#Setup fresh laravel in ubuntu using composer	
+composer create-project --prefer-dist laravel/laravel blog --prefer-dist
 
-Set up your Apache virtual host
+#OR download laravel specific verion
 
-# Copy default Apache conf
-sudo cp /etc/apache2/sites-available/000-default /etc/apache2/sites-available/laravel.conf
-# Edit laravel.conf and change DocumentRoot to /var/www/laravel/public
-sudo nano /etc/apache2/sites-available/laravel.conf
-# Edit laravel.conf add the following and save.
-DocumentRoot /var/www/laravel/public
-<Directory /var/www/laravel/public>
- Options Indexes FollowSymLinks MultiViews
- AllowOverride All
- Order allow,deny
- allow from all
-</Directory>
-# Reload Apache
-sudo service apache2 reload
-# Disable default Apache conf
-sudo a2dissite 000-default.conf
-# Enable laravel.conf
-sudo a2ensite laravel.conf
-# Reload Apache
-sudo service apache reload
+composer create-project --prefer-dist laravel/laravel blog "5.8.*"
+
+#Open Terminal : >_ 
+sudo -i 
+cd /etc/apache2/sites-available/
+cp 000-default.conf blog.conf
+#copy and paste this text 
+		 
+<VirtualHost *:80>
+	ServerName blog.co
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html/blog/public
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+	<Directory /var/www/html/blog>
+		Options All
+		AllowOverride All
+		Order allow,deny
+		Allow from all
+	</Directory>
+</VirtualHost>
+
+#Save and close.
+a2ensite blog.conf
+service apache2 restart
+gedit cd /etc/hosts
+
+#Register your blog.co in hosts file
+#Add this line : 
+127.0.0.1 	blog.co
+
+#Go to browser and hit : 
+http://blog.co
+
+#setting up .env file with database credentials
+php artisan migrate
