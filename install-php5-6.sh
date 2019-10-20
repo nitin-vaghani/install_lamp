@@ -18,13 +18,13 @@ sudo apt install mysql-server
 sudo apt-get install phpmyadmin
 
 #Open apache2.conf file and include phpmyadmin
-gedit /etc/apache2/apache2.conf
+sudo gedit /etc/apache2/apache2.conf
 
 #Add the following to the bottom of the file:
 Include /etc/phpmyadmin/apache.conf
 
 #restart apache server
-service apache2 restart
+sudo service apache2 restart
 
 
 # Set group to www-data
@@ -53,13 +53,16 @@ sudo a2enmod rewrite
 # restart apache
 sudo service apache2 restart
 
+#Install Curl
+sudo apt install curl
+ 
 #Install Composer First
 cd ~
 curl -sS https://getcomposer.org/installer | sudo php
 
 sudo mv composer.phar /usr/local/bin/composer
 
-#Setup fresh laravel in ubuntu using composer	
+#Setup fresh laravel in ubuntu using composer, go to /var/www/html directory
 composer create-project --prefer-dist laravel/laravel blog --prefer-dist
 
 #OR download laravel specific verion
