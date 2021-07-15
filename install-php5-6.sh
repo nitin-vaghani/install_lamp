@@ -58,9 +58,11 @@ sudo apt install curl
  
 #Install Composer First
 cd ~
-curl -sS https://getcomposer.org/installer | sudo php
-
+sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/local/bin/composer
+sudo ln -s /usr/local/bin/composer /usr/bin/composer
+
+composer -v
 
 #Setup fresh laravel in ubuntu using composer, go to /var/www/html directory
 composer create-project --prefer-dist laravel/laravel blog --prefer-dist
