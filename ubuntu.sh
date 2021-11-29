@@ -53,18 +53,38 @@ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-availab
 # Edit laravel.conf and change DocumentRoot to /var/www/laravel/public
 sudo nano /etc/apache2/sites-available/laravel.conf
 # Edit laravel.conf add the following and save.
-DocumentRoot /var/www/laravel/public
-<Directory /var/www/laravel/public>
- Options Indexes FollowSymLinks MultiViews
- AllowOverride All
- Order allow,deny
- allow from all
-</Directory>
-# Reload Apache
-sudo service apache2 reload
+
+<VirtualHost *:80>
+	ServerName laravel.co
+	ServerAdmin webmaster@localhost
+	DocumentRoot /var/www/html/laravel/public
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+	<Directory /var/www/html/laravel>
+		Options All
+		AllowOverride All
+		Order allow,deny
+		Allow from all
+	</Directory>
+</VirtualHost>
+
+#Save and close.
+
 # Disable default Apache conf
 sudo a2dissite 000-default.conf
+
 # Enable laravel.conf
 sudo a2ensite laravel.conf
+
 # Reload Apache
-sudo service apache reload
+sudo service apache2 reload
+
+#Register your laravel.co in hosts file
+gedit cd /etc/hosts
+
+#Add this line : 
+127.0.0.1 	laravel.co
+
+#Go to browser and hit : 
+http://laravel.co
