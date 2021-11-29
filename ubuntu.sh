@@ -6,7 +6,6 @@ sudo apt-get install php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6
 sudo apt install mysql-server
 sudo apt-get install phpmyadmin
 
-
 # Set group to www-data
 sudo chgrp www-data /var/www/html
 
@@ -24,28 +23,19 @@ sudo chown username /var/www/html
 
 # Your account shouldn't have any more permission issues
 
-Install Curl
-sudo apt-get install php5-curl
-
-Install Mycrypt
-sudo apt-get install php5-mcrypt
-
-Activate Mcrypt
-# Enable extension
-sudo php5enmod mcrypt
-
 # Restart Apache
 sudo service apache2 reload
 
-
-Enable Mod-Rewrite
-# enable rewrite
+#Enable Mod-Rewrite
 sudo a2enmod rewrite
 
 # restart apache
 sudo service apache2 restart
 
-Install Composer First
+# Install Curl
+sudo apt-get install curl
+
+# Install Composer First
 cd ~
 curl -sS https://getcomposer.org/installer | sudo php
 
