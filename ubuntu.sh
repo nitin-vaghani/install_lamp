@@ -49,7 +49,7 @@ composer create-project laravel/laravel your-project --prefer-dist
 Set up your Apache virtual host
 
 # Copy default Apache conf
-sudo cp /etc/apache2/sites-available/000-default /etc/apache2/sites-available/laravel.conf
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/laravel.conf
 # Edit laravel.conf and change DocumentRoot to /var/www/laravel/public
 sudo nano /etc/apache2/sites-available/laravel.conf
 # Edit laravel.conf add the following and save.
