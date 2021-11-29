@@ -74,6 +74,9 @@ sudo nano /etc/apache2/sites-available/laravel.conf
 # Disable default Apache conf
 sudo a2dissite 000-default.conf
 
+# Reload Apache
+sudo service apache2 reload
+
 # Enable laravel.conf
 sudo a2ensite laravel.conf
 
@@ -81,7 +84,7 @@ sudo a2ensite laravel.conf
 sudo service apache2 reload
 
 #Register your laravel.co in hosts file
-gedit cd /etc/hosts
+sudo gedit /etc/hosts
 
 #Add this line : 
 127.0.0.1 	laravel.co
