@@ -91,3 +91,12 @@ sudo gedit /etc/hosts
 
 #Go to browser and hit : 
 http://laravel.co
+
+#PHPMYADMIN
+
+#Include phpmyadmin in apache2 conf
+sudo gedit /etc/apache2/apache2.conf 
+
+#Copy & Paste below line at the end of file
+Include /etc/phpmyadmin/apache.conf
+
