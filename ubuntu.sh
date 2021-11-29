@@ -43,7 +43,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 Install Laravel
 # your-project is your destination folder
-cd /var/www/
+cd /var/www/html
 composer create-project laravel/laravel your-project --prefer-dist
 
 Set up your Apache virtual host
