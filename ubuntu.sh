@@ -9,7 +9,8 @@ sudo apt-get install -y software-properties-common
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install -y php5.6
-sudo apt-get install php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip php5.6-xml
+sudo apt-get install php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip php5.6-xml libapache2-mod-php5.6 php5.6-xmlrpc
+
 sudo apt install mysql-server
 sudo apt-get install phpmyadmin
 
@@ -44,9 +45,12 @@ sudo apt-get install curl
 
 # Install Composer First
 cd ~
-curl -sS https://getcomposer.org/installer | sudo php
-
+sudo curl -sS https://getcomposer.org/installer | sudo php
 sudo mv composer.phar /usr/local/bin/composer
+sudo ln -s /usr/local/bin/composer /usr/bin/composer
+
+#check compoer version
+composer -v
 
 Install Laravel
 # your-project is your destination folder
