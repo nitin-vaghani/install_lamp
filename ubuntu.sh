@@ -1,3 +1,4 @@
+#IMPORTANT NOTE: php5.6 is now supported on 18.04 or above
 
 #For Ubuntu 16.04
 sudo apt-get install python-software-properties
