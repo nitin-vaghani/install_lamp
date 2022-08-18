@@ -96,6 +96,19 @@ Include /etc/phpmyadmin/apache.conf
 # restart apache
 >sudo service apache2 restart
 
+# Set localhost root user password
+>sudo gedit /etc/phpmyadmin/config.inc.php
+*Search: AllowNoPassword
+*uncomment it.
+
+>sudo mysql -u root
+
+>USE mysql;
+
+>UPDATE mysql.user SET authentication_string=PASSWORD(''), plugin='mysql_native_password' WHERE User='root' AND Host='localhost';FLUSH PRIVILEGES;EXIT;
+
+>sudo service mysql restart
+
 =============================================================================================================================================
 
 # Install Curl
