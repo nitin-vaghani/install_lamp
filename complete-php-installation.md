@@ -103,6 +103,10 @@ Include /etc/phpmyadmin/apache.conf
 
 *uncomment it.
 
+*Add below line into config.inc.php and save it
+
+>$cfg['SendErrorReports'] = 'never';
+
 >sudo mysql -u root
 
 >USE mysql;
@@ -111,7 +115,8 @@ Include /etc/phpmyadmin/apache.conf
 
 >sudo service mysql restart
 
-Now Open PHPMYADMIN
+
+
 ===================================================================================================
 
 # Install Curl
