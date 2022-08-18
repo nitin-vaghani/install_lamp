@@ -52,7 +52,7 @@ NOTICE: You are seeing this message because you have apache2 package installed.
 
 >sudo apt-get install php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip libapache2-mod-php5.6 php5.6-xdebug
 
-=============================================================================================================================================
+==================================================================================================
 
 # Install Mysql Server (mysql server v8.0)
 >sudo apt install mysql-server
