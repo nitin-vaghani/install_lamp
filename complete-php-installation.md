@@ -1,6 +1,6 @@
 # Install PHP 8.0 in Ubuntu 20.04 LTS
 
-sudo apt-get install -y software-properties-common
+> sudo apt-get install -y software-properties-common
 
 sudo add-apt-repository ppa:ondrej/php
 
