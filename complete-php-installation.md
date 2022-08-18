@@ -11,26 +11,26 @@
 
 >>sudo apt-get install php8.1-curl php8.1-dev php8.1-gd php8.1-mbstring php8.1-zip php8.1-mysql php8.1-xml php8.1-bcmath php8.1-cli php8.1-common php8.1-intl php8.1-soap php8.1-fpm php8.1-xsl php8.1-iconv php8.1-memcached
 
+NOTICE: Not enabling PHP 8.1 FPM by default.
+
+NOTICE: To enable PHP 8.1 FPM in Apache2 do:
+
+>sudo a2enmod proxy_fcgi setenvif
+
+>sudo systemctl restart apache2
+
+>sudo a2enconf php8.1-fpm
+
+>sudo systemctl reload apache2
+
+NOTICE: You are seeing this message because you have apache2 package installed.
+
 
 # Install PHP 8.0 in Ubuntu 20.04 LTS
 
 >sudo apt-get install -y php8.0
 
 >>sudo apt-get install php8.0-curl php8.0-dev php8.0-gd php8.0-mbstring php8.0-zip php8.0-mysql php8.0-xml php8.0-bcmath php8.0-cli php8.0-common php8.0-intl php8.0-soap php8.0-fpm php8.0-xsl php8.0-iconv php8.0-memcached
-
-NOTICE: Not enabling PHP 8.0 FPM by default.
-
-NOTICE: To enable PHP 8.0 FPM in Apache2 do:
-
->sudo a2enmod proxy_fcgi setenvif
-
->sudo systemctl restart apache2
-
->sudo a2enconf php8.0-fpm
-
->sudo systemctl reload apache2
-
-NOTICE: You are seeing this message because you have apache2 package installed.
 
 # Install PHP 7.4 in Ubuntu 20.04 LTS
 >sudo apt-get install -y php7.4
@@ -105,6 +105,7 @@ Include /etc/phpmyadmin/apache.conf
 >sudo service apache2 restart
 
 # Set localhost root user password
+
 >sudo gedit /etc/phpmyadmin/config.inc.php
 
 *Search: AllowNoPassword
@@ -125,7 +126,16 @@ Login into MySQL
 
 >sudo service mysql restart
 
-Update default server configurations
+# Update default server configurations
+
+Open php.ini based on your selected php version
+
+For Ex: 
+
+>sudo gedit /etc/php/8.0/apache2/php.ini
+>sudo gedit /etc/php/8.0/cli/php.ini
+>sudo gedit /etc/php/8.0/fpm/php.ini
+
 
 >post_max_size = 2000M
 >upload_max_filesize = 2000M
@@ -134,6 +144,9 @@ Update default server configurations
 >memory_limit = 2000M
 >session.gc_maxlifetime = 99900
 
+restart apache
+
+>sudo service apache2 restart
 
 ===================================================================================================
 
