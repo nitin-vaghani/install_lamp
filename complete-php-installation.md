@@ -1,10 +1,18 @@
-# Install PHP 8.0 in Ubuntu 20.04 LTS
-
+# Add Software common properties
 >sudo apt-get install -y software-properties-common
 
 >sudo add-apt-repository ppa:ondrej/php
 
 >sudo apt-get update
+
+# Install PHP 8.1 in Ubuntu 20.04 LTS
+
+>sudo apt-get install -y php8.1
+
+>>sudo apt-get install php8.1-curl php8.1-dev php8.1-gd php8.1-mbstring php8.1-zip php8.1-mysql php8.1-xml php8.1-bcmath php8.1-cli php8.1-common php8.1-intl php8.1-soap php8.1-fpm php8.1-xsl php8.1-iconv php8.1-memcached
+
+
+# Install PHP 8.0 in Ubuntu 20.04 LTS
 
 >sudo apt-get install -y php8.0
 
@@ -107,6 +115,8 @@ Include /etc/phpmyadmin/apache.conf
 
 >$cfg['SendErrorReports'] = 'never';
 
+Login into MySQL
+
 >sudo mysql -u root
 
 >USE mysql;
@@ -115,6 +125,14 @@ Include /etc/phpmyadmin/apache.conf
 
 >sudo service mysql restart
 
+Update default server configurations
+
+>post_max_size = 2000M
+>upload_max_filesize = 2000M
+>max_execution_time = 300
+>max_input_time = 300
+>memory_limit = 2000M
+>session.gc_maxlifetime = 99900
 
 
 ===================================================================================================
