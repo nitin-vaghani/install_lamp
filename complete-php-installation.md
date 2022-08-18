@@ -14,11 +14,11 @@ NOTICE: Not enabling PHP 8.0 FPM by default.
 
 NOTICE: To enable PHP 8.0 FPM in Apache2 do:
 
-NOTICE: >sudo a2enmod proxy_fcgi setenvif
+>sudo a2enmod proxy_fcgi setenvif
 
 >sudo systemctl restart apache2
 
-NOTICE: >sudo a2enconf php8.0-fpm
+>sudo a2enconf php8.0-fpm
 
 >sudo systemctl reload apache2
 
