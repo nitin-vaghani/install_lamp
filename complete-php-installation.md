@@ -111,6 +111,7 @@ Include /etc/phpmyadmin/apache.conf
 
 >sudo service mysql restart
 
+Now Open PHPMYADMIN
 ===================================================================================================
 
 # Install Curl
