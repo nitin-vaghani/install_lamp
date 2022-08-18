@@ -133,15 +133,22 @@ Open php.ini based on your selected php version
 For Ex: 
 
 >sudo gedit /etc/php/8.0/apache2/php.ini
+>
 >sudo gedit /etc/php/8.0/cli/php.ini
+>
 >sudo gedit /etc/php/8.0/fpm/php.ini
 
 
 >post_max_size = 2000M
+>
 >upload_max_filesize = 2000M
+>
 >max_execution_time = 300
+>
 >max_input_time = 300
+>
 >memory_limit = 2000M
+>
 >session.gc_maxlifetime = 99900
 
 restart apache
