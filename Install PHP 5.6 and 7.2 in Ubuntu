@@ -1,5 +1,4 @@
-Install PHP 5.6 and 7.2 in Ubuntu
-
+Install PHP v8.1,v8.0, v7.4, v7.3, v7.2, v5.6 in Ubuntu
 
 Ref: https://tecadmin.net/install-php5-on-ubuntu/
 
@@ -88,6 +87,8 @@ sudo apt-get install php7.3-curl php7.3-dev php7.3-gd php7.3-mbstring php7.3-zip
 sudo apt-get install php7.4-curl php7.4-dev php7.4-gd php7.4-mbstring php7.4-zip php7.4-mysql php7.4-xml php7.4-bcmath php7.4-cli php7.4-common php7.4-intl php7.4-json php7.4-soap php7.4-fpm php7.4-xsl php7.4-iconv php7.4-memcached
 
 sudo apt-get install php8.0-curl php8.0-dev php8.0-gd php8.0-mbstring php8.0-zip php8.0-mysql php8.0-xml php8.0-bcmath php8.0-cli php8.0-common php8.0-intl php8.0-json php8.0-soap php8.0-fpm php8.0-xsl php8.0-iconv php8.0-memcached
+
+sudo apt-get install php8.1-curl php8.1-dev php8.1-gd php8.1-mbstring php8.1-zip php8.1-mysql php8.1-xml php8.1-bcmath php8.1-cli php8.1-common php8.1-intl php8.1-json php8.1-soap php8.1-fpm php8.1-xsl php8.1-iconv php8.1-memcached
 /************************** END Install PHP Different Versions *******************************************/
 
 
