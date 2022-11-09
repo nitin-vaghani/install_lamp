@@ -173,4 +173,5 @@ restart apache
 
 # New folder & File create
 >mkdir ~/Templates
+>
 >touch ~/Templates/Text\ File.txt
