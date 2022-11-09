@@ -170,3 +170,7 @@ restart apache
 >sudo ln -s /usr/local/bin/composer /usr/bin/composer
 
 >composer -v
+
+#New folder & File create
+mkdir ~/Templates
+touch ~/Templates/Text\ File.txt
