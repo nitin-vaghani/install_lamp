@@ -122,7 +122,7 @@ Login into MySQL
 
 >USE mysql;
 
->UPDATE mysql.user SET authentication_string=PASSWORD(''), plugin='mysql_native_password' WHERE User='root' AND Host='localhost';FLUSH PRIVILEGES;EXIT;
+>UPDATE mysql.user SET authentication_string='', plugin='mysql_native_password' WHERE User='root' AND Host='localhost';FLUSH PRIVILEGES;EXIT;
 
 >sudo service mysql restart
 
