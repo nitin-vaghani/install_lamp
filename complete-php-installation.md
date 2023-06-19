@@ -5,6 +5,12 @@
 
 >sudo apt-get update
 
+# Install PHP 8.2 in Ubuntu 20.04 LTS
+
+>sudo apt-get install -y php8.2
+
+sudo apt install php8.2-{bcmath,fpm,xml,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi}
+
 # Install PHP 8.1 in Ubuntu 20.04 LTS
 
 >sudo apt-get install -y php8.1
