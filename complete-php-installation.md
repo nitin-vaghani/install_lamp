@@ -36,7 +36,7 @@ NOTICE: You are seeing this message because you have apache2 package installed.
 
 >sudo apt-get install -y php8.0
 
->>sudo apt-get install php8.0-curl php8.0-dev php8.0-gd php8.0-mbstring php8.0-zip php8.0-mysql php8.0-xml php8.0-bcmath php8.0-cli php8.0-common php8.0-intl php8.0-soap php8.0-fpm php8.0-xsl php8.0-iconv php8.0-memcached
+>sudo apt-get install php8.0-curl php8.0-dev php8.0-gd php8.0-mbstring php8.0-zip php8.0-mysql php8.0-xml php8.0-bcmath php8.0-cli php8.0-common php8.0-intl php8.0-soap php8.0-fpm php8.0-xsl php8.0-iconv php8.0-memcached
 
 # Install PHP 7.4 in Ubuntu 20.04 LTS
 >sudo apt-get install -y php7.4
