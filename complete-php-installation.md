@@ -4,6 +4,11 @@
 >sudo add-apt-repository ppa:ondrej/php
 
 >sudo apt-get update
+# Install PHP 8.3 in Ubuntu 20.04 LTS
+
+>sudo apt-get install -y php8.3
+
+>sudo apt install php8.2-{bcmath,fpm,xml,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi}
 
 # Install PHP 8.2 in Ubuntu 20.04 LTS
 
