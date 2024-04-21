@@ -8,7 +8,7 @@
 
 >sudo apt-get install -y php8.3
 
->sudo apt install php8.2-{bcmath,fpm,xml,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi}
+>sudo apt install php8.3-{bcmath,fpm,xml,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi}
 
 >sudo apt install php-mysql
 
