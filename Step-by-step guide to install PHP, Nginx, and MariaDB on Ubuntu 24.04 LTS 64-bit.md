@@ -74,11 +74,12 @@ PHP is the scripting language that will run on your server.
    ```bash
    sudo add-apt-repository ppa:ondrej/php
    sudo apt update
+   sudo apt install imagemagick -y
    ```
 
 2. Install PHP and necessary extensions:
    ```bash
-   sudo apt install php8.3 php8.3-{bcmath,fpm,xml,xmlrpc,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi} -y
+   sudo apt install php8.3 php8.3-{common,bcmath,fpm,xml,xmlrpc,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi,imagick,json,hash,mcrypt,iconv} -y
    ```
 
 3. Enable and start PHP-FPM (FastCGI Process Manager):
