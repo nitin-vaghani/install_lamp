@@ -1,3 +1,12 @@
+This tutorial is going to show you how to install LEMP stack (Nginx, MariaDB, and PHP8.3) on Ubuntu 24.04. A software stack is a set of software tools bundled together. LEMP stands for Linux, Nginx (Engine-X), MariaDB/MySQL, and PHP, all of which are open source and free to use.
+
+It is the most common software stack that powers dynamic websites and web applications.
+
+    Linux is the operating system.
+    Nginx is the web server.
+    MariaDB/MySQL is the database server.
+    PHP is the server-side scripting language responsible for generating dynamic web pages.
+
 Here's a step-by-step guide to install PHP, Nginx, and MariaDB on Ubuntu 24.04 LTS 64-bit:
 
 ### Step 1: Update and Upgrade the System
