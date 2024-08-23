@@ -69,18 +69,18 @@ PHP is the scripting language that will run on your server.
 
 2. Install PHP and necessary extensions:
    ```bash
-   sudo apt install php8.2 php8.2-fpm php8.2-mysql php8.2-cli php8.2-curl php8.2-xml php8.2-mbstring php8.2-zip -y
+   sudo apt install php8.3 php8.3-{bcmath,fpm,xml,xmlrpc,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi} -y
    ```
 
 3. Enable and start PHP-FPM (FastCGI Process Manager):
    ```bash
-   sudo systemctl enable php8.2-fpm
-   sudo systemctl start php8.2-fpm
+   sudo systemctl enable php8.3-fpm
+   sudo systemctl start php8.3-fpm
    ```
 
 4. Check if PHP-FPM is running:
    ```bash
-   sudo systemctl status php8.2-fpm
+   sudo systemctl status php8.3-fpm
    ```
    You should see a message indicating that PHP-FPM is active and running.
 
@@ -109,7 +109,7 @@ You need to configure Nginx to use PHP for processing `.php` files.
 
        location ~ \.php$ {
            include snippets/fastcgi-php.conf;
-           fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+           fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;
        }
 
        location ~ /\.ht {
