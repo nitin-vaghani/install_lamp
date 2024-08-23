@@ -2,10 +2,10 @@ This tutorial is going to show you how to install LEMP stack (Nginx, MariaDB, an
 
 It is the most common software stack that powers dynamic websites and web applications.
 
-    Linux is the operating system.
-    Nginx is the web server.
-    MariaDB/MySQL is the database server.
-    PHP is the server-side scripting language responsible for generating dynamic web pages.
+    1. Linux is the operating system.
+    2. Nginx is the web server.
+    3. MariaDB/MySQL is the database server.
+    4. PHP is the server-side scripting language responsible for generating dynamic web pages.
 
 Here's a step-by-step guide to install PHP, Nginx, and MariaDB on Ubuntu 24.04 LTS 64-bit:
 
