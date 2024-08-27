@@ -79,7 +79,7 @@ PHP is the scripting language that will run on your server.
 
 2. Install PHP and necessary extensions:
    ```bash
-   sudo apt install php8.3 php8.3-{common,bcmath,fpm,xml,xmlrpc,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi,imagick,json,hash,mcrypt,iconv} -y
+   sudo apt install php8.3 php8.3-{common,bcmath,fpm,xml,xmlrpc,mysql,zip,intl,ldap,gd,cli,bz2,curl,mbstring,pgsql,opcache,soap,cgi,imagick,mcrypt} -y
    ```
 
 3. Enable and start PHP-FPM (FastCGI Process Manager):
