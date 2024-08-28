@@ -72,7 +72,7 @@ PHP is the scripting language that will run on your server.
 
 1. Add the PHP repository:
    ```bash
-   sudo add-apt-repository ppa:ondrej/php
+   sudo add-apt-repository ppa:ondrej/php -y
    sudo apt update
    sudo apt install imagemagick -y
    ```
