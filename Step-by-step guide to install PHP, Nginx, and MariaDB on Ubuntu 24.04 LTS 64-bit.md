@@ -15,10 +15,9 @@ Before installing any packages, it's important to update your system.
 1. Open a terminal.
 2. Run the following commands:
    ```bash
+   sudo add-apt-repository ppa:ondrej/nginx -y
    sudo apt update
-   sudo apt upgrade -y
    sudo apt dist-upgrade -y
-   sudo apt autoremove -y
    ```
 
 ### Step 2: Install Nginx
